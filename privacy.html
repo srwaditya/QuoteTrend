@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuoteTrend - Privacy Policy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+    }
+    
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-size: 2.5em;
+    }
+    
+    .last-updated {
+      color: #7f8c8d;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+    
+    h2 {
+      color: #34495e;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    
+    h3 {
+      color: #2c3e50;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    
+    p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+    
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      color: #555;
+    }
+    
+    .highlight {
+      background-color: #fff3cd;
+      padding: 15px;
+      border-left: 4px solid #ffc107;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    
+    .info-box {
+      background-color: #e3f2fd;
+      padding: 15px;
+      border-left: 4px solid #2196F3;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ecf0f1;
+      color: #7f8c8d;
+      font-size: 14px;
+      text-align: center;
+    }
+    
+    code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: "Courier New", monospace;
+      color: #c7254e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔒 Privacy Policy</h1>
+    <p class="last-updated">Last Updated: February 22, 2026</p>
+    
+    <h2>Overview</h2>
+    <p>
+      QuoteTrend ("the Extension") is committed to protecting your privacy. This Privacy Policy explains what data we collect, 
+      how we use it, and your rights regarding your information.
+    </p>
+    
+    <div class="info-box">
+      <strong>Key Point:</strong> QuoteTrend does <strong>NOT</strong> collect, store, or transmit personal information about you. 
+      All data remains local on your device.
+    </div>
+    
+    <h2>Data Collection</h2>
+    
+    <h3>Local Storage (Device Only)</h3>
+    <p>QuoteTrend stores the following data locally on your device using Chrome's <code>chrome.storage.local</code>:</p>
+    <ul>
+      <li><strong>Installation Date:</strong> The date you installed the extension (ISO format). Used to cycle through days 1–7.</li>
+      <li><strong>Cached Quotes:</strong> Quotes fetched from the API are cached locally with timestamps. Cache expires after 24 hours.</li>
+      <li><strong>Configuration:</strong> Any user preferences or settings (if added in future versions).</li>
+    </ul>
+    
+    <p><strong>Why?</strong> Caching reduces API calls and improves performance. Local storage ensures the extension works offline and respects your privacy.</p>
+    
+    <h3>External API Requests</h3>
+    <p>QuoteTrend fetches quotes from <strong>Quotable.io</strong> (https://api.quotable.io/random):</p>
+    <ul>
+      <li><strong>What We Send:</strong> Only an HTTP GET request to fetch a random quote. No personal data is transmitted.</li>
+      <li><strong>What We Receive:</strong> A random quote and author attribution (public data).</li>
+      <li><strong>Frequency:</strong> Up to 3 times per day (morning, afternoon, evening) if the cache expires.</li>
+      <li><strong>Third-Party Privacy:</strong> Quotable.io's privacy practices are independent. See their terms at https://quotable.io.</li>
+    </ul>
+    
+    <div class="highlight">
+      <strong>Important:</strong> Quotable.io is a third-party service. We do not control their data handling. 
+      If you are concerned, you can replace the API endpoint in <code>quotes.js</code> with a self-hosted solution.
+    </div>
+    
+    <h2>What We Do NOT Collect</h2>
+    <ul>
+      <li>Personal identifiable information (name, email, phone, location, etc.)</li>
+      <li>Browsing history</li>
+      <li>Search queries or activity logs</li>
+      <li>IP addresses or device identifiers</li>
+      <li>Cookies or tracking pixels</li>
+      <li>Usage analytics or telemetry</li>
+    </ul>
+    
+    <h2>Permissions Explained</h2>
+    
+    <h3><code>alarms</code></h3>
+    <p>Allows QuoteTrend to schedule three daily alarms (8 AM, 1 PM, 7 PM). No data is collected or shared.</p>
+    
+    <h3><code>notifications</code></h3>
+    <p>Displays system notifications when quotes are delivered. No data is sent to external servers.</p>
+    
+    <h3><code>storage</code></h3>
+    <p>Stores installation date and cached quotes locally. Data never leaves your device.</p>
+    
+    <h3><code>tabs</code> and <code>windows</code></h3>
+    <p>Allows the extension to create popup windows for quote display. No data is collected or shared.</p>
+    
+    <h3><code>host_permissions</code> (<code>&lt;all_urls&gt;</code>)</h3>
+    <p>
+      Allows QuoteTrend to make HTTPS requests to Quotable.io's API. 
+      This permission is necessary for fetching quotes but does not enable data collection about your browsing.
+    </p>
+    
+    <h2>Data Security</h2>
+    <ul>
+      <li><strong>Local Data:</strong> Protected by your browser's sandboxing model. Chrome isolates extension storage per user.</li>
+      <li><strong>API Requests:</strong> Transmitted over HTTPS (encrypted).</li>
+      <li><strong>No Backend:</strong> QuoteTrend has no servers. We do not store, log, or analyze your data.</li>
+    </ul>
+    
+    <h2>Data Retention & Deletion</h2>
+    <p><strong>Your Control:</strong> All QuoteTrend data is stored locally on your device. To delete it:</p>
+    <ol>
+      <li>Open Chrome Extensions (<code>chrome://extensions</code>).</li>
+      <li>Click "Remove" on the QuoteTrend extension.</li>
+      <li>All local storage and cached data is permanently deleted.</li>
+    </ol>
+    
+    <p><strong>Automatic Expiry:</strong> Cached quotes are automatically deleted after 24 hours.</p>
+    
+    <h2>Third-Party Services</h2>
+    <p><strong>Quotable.io:</strong> We use this free, public API to fetch motivational quotes. 
+    Their API does not require authentication and serves generic quote data. 
+    Please review their privacy policy at https://quotable.io for their data practices.</p>
+    
+    <h2>Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy as the extension evolves. 
+      Changes will be posted here with an updated "Last Updated" date. 
+      Continued use of QuoteTrend constitutes acceptance of updated terms.
+    </p>
+    
+    <h2>Contact & Feedback</h2>
+    <p>
+      If you have questions about this Privacy Policy or QuoteTrend's data practices, 
+      you can open an issue on the extension's GitHub repository or contact the developer.
+    </p>
+    
+    <div class="info-box">
+      <strong>Your Privacy Matters:</strong> QuoteTrend is designed with privacy-first principles. 
+      No data about you is collected, analyzed, or shared. Your device, your data, your choice.
+    </div>
+    
+    <div class="footer">
+      <p>&copy; 2026 QuoteTrend. All rights reserved.</p>
+      <p>This Privacy Policy is effective as of February 22, 2026.</p>
+    </div>
+  </div>
+</body>
+</html>
